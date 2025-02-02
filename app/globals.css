@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .debug {
+    @apply border border-red-500;
+  }
+
+  .horizontal {
+    @apply flex flex-row;
+  }
+
+  .vertical {
+    @apply flex flex-col;
+  }
+
+  .center-v {
+    @apply justify-center;
+  }
+
+  .center-h {
+    @apply items-center;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-zinc-200 dark:border-zinc-800;
+  }
+
+  mark {
+    @apply bg-transparent dark:text-yellow-50 border-b-2 font-medium border-yellow-400 dark:border-yellow-50;
+  }
+
+  html,
+  body {
+    @apply h-full min-h-full antialiased;
+  }
+
+  html {
+    @apply bg-zinc-100;
+  }
+
+  html.dark {
+    @apply bg-zinc-950;
+  }
+
+  body {
+    @apply grid min-h-full h-full dark:text-zinc-50;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  .prose img {
+    @apply inline-block;
+  }
+
+  .prose > article > h1 {
+    @apply mt-4;
+  }
+}
+
+#keystatic-logo {
+  width: 24px;
+}
